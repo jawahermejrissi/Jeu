@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { RoomComponentComponent } from './room-component/room-component.component';
+import { CreateRoomComponent } from './room-component/create-room/create-room.component';
 
 const routes: Routes = [
   { path: '',  redirectTo: 'game/Login', pathMatch: 'full'},
@@ -17,6 +18,10 @@ const routes: Routes = [
     {
       path: 'Room',
       component: RoomComponentComponent, // another child route component that the router renders
+    },
+    {
+      path: 'CreateRoom',
+      component: CreateRoomComponent, // another child route component that the router renders
     },
   
   ]

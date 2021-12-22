@@ -16,5 +16,8 @@ export class HomeComponentComponent implements OnInit {
   changementDePage() {
     this.router.navigate(['../Room']);
  };
+ CreateRoom() {
+  this.router.navigate(['../CreateRoom']);
+};
 
 }

@@ -15,6 +15,9 @@ import { RoomComponentComponent } from './room-component/room-component.componen
 import { CanvasComponent } from './canvas/canvas.component';
 import { UserComponent } from './user/user.component';
 
+import { ApiService } from './Services/api.service';
+import { CreateRoomComponent } from './room-component/create-room/create-room.component';
+
 
 @NgModule({
   declarations: [
@@ -24,17 +27,20 @@ import { UserComponent } from './user/user.component';
     HomeComponentComponent,
     RoomComponentComponent,
     CanvasComponent,
-    UserComponent
+    UserComponent,
+    CreateRoomComponent
 
   ],
   imports: [
+ 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
     FormsModule,
     ReactiveFormsModule,
+
   ],
-  providers: [SharedService],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

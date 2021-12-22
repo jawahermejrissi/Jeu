@@ -32,7 +32,7 @@ export class CanvasComponent implements AfterViewInit {
     if (!this.cx) throw 'Cannot get context';
 
     this.cx.lineWidth = 3;
-    
+
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = '#000';
 
@@ -40,7 +40,7 @@ export class CanvasComponent implements AfterViewInit {
   }
 
   private captureEvents(canvasEl: HTMLCanvasElement) {
-    // this will capture all mousedown events from the canvas element
+    // this will capture all mousedown events from the canvas
     fromEvent(canvasEl, 'mousedown')
       .pipe(
         switchMap(e => {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../Services/api.service';
 
 @Component({
   selector: 'app-user',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  User: any = [];
 
-  constructor() { }
+  constructor( public restapi : ApiService ) { }
 
   ngOnInit(): void {
+    this.loadUsers()
   }
+
+    // Get userslist
+    loadUsers() {
+      return this.restapi.getUserss().subscribe((data: {}) => {
+        this.User= data;
+      })
+    }
 
 }
