@@ -32,6 +32,7 @@ export class CanvasComponent implements AfterViewInit {
     if (!this.cx) throw 'Cannot get context';
 
     this.cx.lineWidth = 3;
+    
     this.cx.lineCap = 'round';
     this.cx.strokeStyle = '#000';
 
